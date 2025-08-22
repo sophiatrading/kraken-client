@@ -46,8 +46,4 @@ services:
 volumes:
   pgvol:
 
-networks:
-  default:
-    external:
-      name: docker-core_crypto
  
