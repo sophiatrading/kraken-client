@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:slim-trixie
 
 ENV database=crypto-executor
 ENV host=localhost
@@ -7,7 +7,7 @@ ENV password=123456
 ENV port=5432
 
 MAINTAINER Aureliano Sinatra "sinaure@gmail.com"
-RUN apt-get update -y && apt-get install -y python3 python3-dev python3-pip curl libcurl4-gnutls-dev libgnutls28-dev git libpq-dev 
+RUN apt-get update -y && apt-get install -y build-essential postgresql-server-dev-all
 
 WORKDIR /app
 

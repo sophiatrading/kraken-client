@@ -7,7 +7,7 @@ services:
     image: asinatra/postgres  
     container_name: postgres
     ports:
-      - 5432:5432
+      - 5433:5432
     volumes:
       - /mnt/databases/postgresql/crypto/data:/var/lib/postgresql/data
       - ./docker/postgres/shared/sql:/docker-entrypoint-initdb.d/
@@ -16,7 +16,7 @@ services:
       POSTGRES_PASSWORD: 123456
       POSTGRES_DB: crypto-executor
       POSTGRES_USER: executor
-      POSTGRES_PORT: 5432
+      POSTGRES_PORT: 5433
       
   crypto-datacollect:
     build:
